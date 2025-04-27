@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.button {
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &.primary {
+    background-color: $success-color;
+    color: $white;
+    border: 1px solid #38a169;
+  }
+
+  &.outline {
+    background-color: $white;
+    color: $gray-800;
+    border: 3px solid $gray-700;
+  }
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
