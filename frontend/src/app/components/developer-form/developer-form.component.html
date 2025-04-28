@@ -1,0 +1,92 @@
+<form class="developer-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  @if (screenIsSmall) {
+  <div class="developer-form-group">
+    <button type="button" class="button outline" (click)="onToggleForm()">
+      {{ toggleFormButtonLabel }}
+    </button>
+  </div>
+  } @if(showForm){
+  <div class="developer-form-group">
+    <button
+      type="button"
+      class="button outline"
+      (click)="onRegisterWithGithub()"
+    >
+      <img src="/icons/github-icon.svg" alt="github icon" />
+      Cadastrar com GitHub
+    </button>
+
+    <app-input
+      formControlName="githubUser"
+      id="githubUser"
+      label="Usuário GitHub"
+      [errorMessage]="getErrorMessage(form, 'githubUser')"
+      (blur)="onGetGithubUserData()"
+    ></app-input>
+  </div>
+
+  <hr />
+
+  <div class="developer-form-group">
+    <app-input
+      formControlName="avatarUrl"
+      id="avatarUrl"
+      label="Avatar (URL)"
+      [errorMessage]="getErrorMessage(form, 'avatarUrl')"
+    ></app-input>
+
+    <app-input
+      formControlName="name"
+      id="name"
+      label="Nome"
+      [errorMessage]="getErrorMessage(form, 'name')"
+    ></app-input>
+
+    <app-input
+      formControlName="email"
+      id="email"
+      label="Email"
+      type="email"
+      [errorMessage]="getErrorMessage(form, 'email')"
+    ></app-input>
+
+    <app-input
+      formControlName="city"
+      id="city"
+      label="Cidade"
+      placeholder="ex: Maringá - PR"
+      [errorMessage]="getErrorMessage(form, 'city')"
+    ></app-input>
+  </div>
+
+  <hr />
+
+  <div class="developer-form-group">
+    <h3 class="developer-form-group-title">Profissional</h3>
+
+    <app-input
+      formControlName="academicBackground"
+      id="academicBackground"
+      label="Formação"
+      [errorMessage]="getErrorMessage(form, 'academicBackground')"
+    ></app-input>
+
+    <app-input
+      formControlName="technologies"
+      id="technologies"
+      label="Tecnologias"
+      type="textarea"
+      placeholder="ex: HTML/CSS, Vue, Angular etc."
+      [errorMessage]="getErrorMessage(form, 'technologies')"
+    ></app-input>
+
+    <button type="submit" class="button primary">
+      {{ submitButtonLabel }}
+    </button>
+
+    <button type="button" class="button outline" (click)="onClearForm()">
+      Limpar Formulário
+    </button>
+  </div>
+  }
+</form>
