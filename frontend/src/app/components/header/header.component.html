@@ -1,0 +1,22 @@
+<header>
+  <div class="header-title-container">
+    <div></div>
+    <h1>Cadastro DEV</h1>
+  </div>
+
+  <form class="form-serch" [formGroup]="form">
+    <input
+      formControlName="searchTerm"
+      type="text"
+      placeholder="Buscar desenvolvedor"
+    />
+
+    @if(hasSearchTerm){
+    <button type="button" title="Limpar pesquisa" (click)="onClearSearch()">
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+
+    <img src="/icons/search-icon.svg" alt="search icon" />
+  </form>
+</header>
