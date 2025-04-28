@@ -21,10 +21,13 @@ API Node.js para cadastrar e listar desenvolvedores.
 
 ### Ambiente de Desenvolvimento Local
 
-1. Clone o repositório:
+Após ter baixado os arquivos enviados no PR ou clonado o repositório https://github.com/cristianoof/teste-frontend, siga os passos abaixo:
+
+**Observação: Para facilitar recomenda-se rodar a stack backend com docker-compose, as instruções estão abaixo**
+
+1. Navegue até a pasta do projeto:
 
 ```bash
-git clone [https://github.com/cristianoof/teste-frontend]
 cd backend
 ```
 
