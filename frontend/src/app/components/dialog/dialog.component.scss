@@ -1,0 +1,60 @@
+@use "variables" as *;
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray-800;
+  }
+
+  mat-icon {
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid $gray-300;
+}
+
+.dialog-body {
+  padding: 24px 16px 16px 16px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $gray-800;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px;
+}
+
+.error mat-icon {
+  color: $error-color;
+}
+
+.info mat-icon {
+  color: $info-color;
+}
+
+.success mat-icon {
+  color: $success-color;
+}
+
+.warning mat-icon {
+  color: $warning-color;
+}
+
+.confirm mat-icon {
+  color: $info-color;
+}
