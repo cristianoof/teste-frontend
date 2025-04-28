@@ -1,59 +1,77 @@
-# Frontend
+# Frontend - Cadastro de Desenvolvedores
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+Frontend desenvolvido com Angular 19 para cadastrar e listar desenvolvedores.
 
-## Development server
+## Tecnologias
 
-To start a local development server, run:
+- Node.js
+- Angular 19
+- Angular Material (Dialog)
+- RxJS
+- TypeScript
+- Karma (para testes)
+- Jasmine (para testes)
+
+## Pré-requisitos
+
+- Node.js (v18 ou superior)
+- NPM
+- Angular CLI (v19.2)
+
+## Instalação e Execução
+
+### Ambiente de Desenvolvimento Local
+
+Após ter baixado os arquivos enviados no PR ou clonado o repositório https://github.com/cristianoof/teste-frontend, siga os passos abaixo:
+
+1. Navegue até a pasta do projeto:
+
+```bash
+cd frontend
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Execute em modo de desenvolvimento:
+
+```bash
+npm start
+```
+
+ou
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+A aplicação estará disponível em http://localhost:4200
 
-## Code scaffolding
+### Gerar Build da aplicação
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+1. Gere o build da aplicação:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Executando os testes unitários
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Para rodar os testes unitários com Karma:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Estrutura do Projeto
 
-For end-to-end (e2e) testing, run:
+A aplicação é construída com Angular 19 e TypeScript e os arquivos fonte estão localizados no diretório `src/`.
 
-```bash
-ng e2e
-```
+## Scripts Disponíveis
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `npm start` ou `ng serve` - Executa em modo de desenvolvimento com hot-reload
+- `npm run build` ou `ng build` - Compila o código TypeScript para JavaScript
+- `npm test` ou `ng test` - Executa os testes unitários
