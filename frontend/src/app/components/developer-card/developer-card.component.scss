@@ -1,0 +1,90 @@
+@use "variables" as *;
+
+.developer-card {
+  position: relative;
+  width: 100%;
+  padding-top: 44px;
+
+  .developer-card-avatar {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    width: 88px;
+    height: 88px;
+    border: 3px solid $primary-color;
+    border-radius: 50%;
+
+    .developer-card-avatar-name-initials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-size: 32px;
+      font-weight: 600;
+      color: $primary-color;
+      background-color: $gray-200;
+      border-radius: inherit;
+    }
+
+    img {
+      width: 100%;
+      border-radius: inherit;
+    }
+  }
+
+  .developer-card-info {
+    padding: 48px 16px 16px;
+    background-color: $primary-color;
+    color: $white;
+    font-size: 14px;
+    border-radius: $border-radius;
+
+    .developer-card-info-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    }
+
+    .developer-card-info-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      margin-top: 24px;
+
+      a {
+        color: #68d391;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .developer-card-info-footer-buttons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

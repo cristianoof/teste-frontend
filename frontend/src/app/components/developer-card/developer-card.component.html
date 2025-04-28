@@ -1,0 +1,42 @@
+@if (developerData){
+
+<div class="developer-card">
+  <div class="developer-card-avatar">
+    @if(imageHasError) {
+    <div class="developer-card-avatar-name-initials">{{ nameInitials }}</div>
+    } @else {
+    <img
+      [src]="developerData.avatarUrl"
+      [alt]="developerData.name"
+      (error)="onImageError()"
+    />
+    }
+  </div>
+
+  <div class="developer-card-info">
+    <div class="developer-card-info-body">
+      <h3>{{ developerData.name }}</h3>
+      <span>{{ developerData.city }}</span>
+      <span>{{ developerData.academicBackground }}</span>
+      <p>{{ developerData.technologies }}</p>
+    </div>
+
+    <div class="developer-card-info-footer">
+      @if(developerData.githubUserProfileUrl){
+      <a [href]="developerData.githubUserProfileUrl" target="_blank">
+        Acessar GitHub
+      </a>
+      }
+
+      <div class="developer-card-info-footer-buttons">
+        <button type="button" (click)="onEdit()">
+          <img src="/icons/edit-icon.svg" alt="edit icon" />
+        </button>
+        <button type="button" (click)="onDelete()">
+          <img src="/icons/trash-icon.svg" alt="delete icon" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+}
