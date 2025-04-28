@@ -1,0 +1,62 @@
+@use "variables" as *;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  color: $gray-800;
+
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+
+    &[aria-disabled="true"] {
+      color: $gray-600;
+    }
+  }
+
+  input,
+  textarea {
+    background-color: $white;
+    border-radius: $border-radius;
+    border: 3px solid $gray-500;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    color: inherit;
+
+    &.input {
+      height: 40px;
+    }
+
+    &.textarea {
+      resize: none;
+      height: 90px;
+    }
+
+    &:hover {
+      border-color: $gray-600;
+    }
+
+    &:focus {
+      border-color: $gray-600;
+    }
+
+    &:disabled {
+      background-color: $gray-200;
+      cursor: not-allowed;
+    }
+
+    &.input-error {
+      border-color: $error-color;
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+    font-size: 12px;
+  }
+}
