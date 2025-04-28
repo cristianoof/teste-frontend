@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<main>
+  <div class="main-container">
+    <div class="form-container">
+      <app-developer-form></app-developer-form>
+    </div>
+
+    @if (developers$ | async; as developers) {
+    <ul class="card-container">
+      @for (developer of developers; track developer.id) {
+      <li class="card-item">
+        <app-developer-card [developerData]="developer"></app-developer-card>
+      </li>
+      } @empty {
+      <li>Nenhum desenvolvedor encontrado.</li>
+      }
+    </ul>
+    }
+  </div>
+</main>
